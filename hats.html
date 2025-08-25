@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hats — Sport Clothes</title>
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --acc:#38bdf8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg,#0f172a,#1f2937); color:var(--text); }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:14px 22px; background:rgba(17,24,39,0.9); position:sticky; top:0; backdrop-filter: blur(6px); border-bottom:1px solid #374151; }
+    .nav a { color:var(--text); text-decoration:none; margin-right:18px; font-weight:600; }
+    .nav a.logo { margin-right:auto; color:white; font-weight:800; letter-spacing:0.5px; }
+    .nav .links a:hover { color:var(--acc); }
+    .container { max-width:1100px; margin:0 auto; padding:28px 18px 60px; }
+    .card { background:rgba(31,41,55,0.72); border:1px solid #374151; border-radius:16px; padding:18px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .muted { color:var(--muted); }
+    footer { text-align:center; padding:28px; color:var(--muted); border-top:1px solid #374151; background:rgba(17,24,39,0.6); }
+    .grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; }
+    .item { background:rgba(31,41,55,0.72); border:1px solid #374151; border-radius:16px; padding:12px; text-align:center; display:flex; flex-direction:column; gap:8px; }
+    .item img { width:100%; aspect-ratio: 1/1; object-fit:cover; border-radius:10px; border:1px solid #374151; }
+    .item h3 { margin:6px 0 2px; font-size:16px; }
+    .btn { padding:10px 14px; border-radius:10px; border:1px solid #374151; background:#111827; color:#e5e7eb; cursor:pointer; font-weight:700; }
+    .btn:hover { border-color:var(--acc); color:white; }
+    @media (max-width: 900px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="logo">Sport Clothes</a>
+      <div class="links">
+        <a href="tshirts.html">T-Shirts</a>
+       
+        <a href="hats.html">Hats</a>
+        <a href="shorts.html">Shorts</a>
+        <a href="payment.html">Payment</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h1>Hats</h1>
+      <p class="muted">Pick your favorite and hit Buy to choose size & color.</p>
+    </section>
+
+    <section class="grid" style="margin-top:16px;">
+      <!-- 9 items -->
+      <article class="item"><img src="image/H1.jpg" alt="Hat 1"/><h3>Hat 1</h3><p class="muted">High-performance • Breathable</p><button class="btn" onclick="buy('Hats','Hat 1')">Buy</button></article>
+      <article class="item"><img src="image/H2.jpg" alt="Hat 2"/><h3>Hat 2</h3><p class="muted">High-performance • Breathable</p><button class="btn" onclick="buy('Hats','Hat 2')">Buy</button></article>
+      <article class="item"><img src="image/H3.jpg" alt="Hat 3"/><h3>Hat 3</h3><p class="muted">High-performance • Breathable</p><button class="btn" onclick="buy('Hats','Hat 3')">Buy</button></article>
+      <article class="item"><img src="image/H4.jpg" alt="Hat 4"/><h3>Hat 4</h3><p class="muted">High-performance • Breathable</p><button class="btn" onclick="buy('Hats','Hat 4')">Buy</button></article>
+      <article class="item"><img src="image/H5.jpg" alt="Hat 5"/><h3>Hat 5</h3><p class="muted">High-performance • Breathable</p><button class="btn" onclick="buy('Hats','Hat 5')">Buy</button></article>
+      <article class="item"><img src="image/H6.jpg" alt="Hat 6"/><h3>Hat 6</h3><p class="muted">High-performance • Breathable</p><button class="btn" onclick="buy('Hats','Hat 6')">Buy</button></article>
+      <article class="item"><img src="image/H7.jpg" alt="Hat 7"/><h3>Hat 7</h3><p class="muted">High-performance • Breathable</p><button class="btn" onclick="buy('Hats','Hat 7')">Buy</button></article>
+      <article class="item"><img src="image/H8.jpg" alt="Hat 8"/><h3>Hat 8</h3><p class="muted">High-performance • Breathable</p><button class="btn" onclick="buy('Hats','Hat 8')">Buy</button></article>
+      <article class="item"><img src="image/H9.jpg" alt="Hat 9"/><h3>Hat 9</h3><p class="muted">High-performance • Breathable</p><button class="btn" onclick="buy('Hats','Hat 9')">Buy</button></article>
+    </section>
+  </main>
+
+  <footer>&copy; 2025 Sport Clothes</footer>
+
+  <script>
+    function buy(category, name) {
+      const url = new URL('payment.html', window.location.href);
+      url.searchParams.set('category', category);
+      url.searchParams.set('product', name);
+      window.location.href = url.toString();
+    }
+  </script>
+</body>
+</html>

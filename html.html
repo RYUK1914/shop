@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sport DEPOT — Home</title>
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --text:#e5e7eb; --muted:#9ca3af; --acc:#38bdf8; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; background: linear-gradient(135deg,#0f172a,#1f2937); color:var(--text); }
+    .nav { display:flex; align-items:center; justify-content:space-between; padding:14px 22px; background:rgba(17,24,39,0.9); position:sticky; top:0; backdrop-filter: blur(6px); border-bottom:1px solid #374151; }
+    .nav a { color:var(--text); text-decoration:none; margin-right:18px; font-weight:600; }
+    .nav a.logo { margin-right:auto; color:white; font-weight:800; letter-spacing:0.5px; }
+    .nav .links a:hover { color:var(--acc); }
+    .container { max-width:1100px; margin:0 auto; padding:28px 18px 60px; }
+    h1,h2,h3 { margin:8px 0 10px; }
+    .hero { display:grid; grid-template-columns: 1.1fr 0.9fr; gap:24px; align-items:center; }
+    .card { background:rgba(31,41,55,0.72); border:1px solid #374151; border-radius:16px; padding:18px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); }
+    .muted { color:var(--muted); }
+    video { width:100%; border-radius:12px; border:1px solid #374151; }
+    footer { text-align:center; padding:28px; color:var(--muted); border-top:1px solid #374151; background:rgba(17,24,39,0.6); }
+    .grid { display:grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap:18px; }
+    .item { background:rgba(31,41,55,0.72); border:1px solid #374151; border-radius:16px; padding:12px; text-align:center; display:flex; flex-direction:column; gap:8px; }
+    .item img { width:100%; aspect-ratio: 1/1; object-fit:cover; border-radius:10px; border:1px solid #374151; }
+    .item h3 { margin:6px 0 2px; font-size:16px; }
+    .row { display:flex; justify-content:center; align-items:center; gap:10px; }
+    .btn { padding:10px 14px; border-radius:10px; border:1px solid #374151; background:#111827; color:#e5e7eb; cursor:pointer; font-weight:700; }
+    .btn:hover { border-color:var(--acc); color:white; }
+    .form { max-width:560px; margin:0 auto; display:grid; gap:12px; }
+    label { font-size:14px; }
+    select, input { width:100%; padding:10px; border-radius:10px; border:1px solid #374151; background:#0b1220; color:#e5e7eb; }
+    .summary { margin-top:16px; padding:12px; border-radius:12px; border:1px solid #374151; background:rgba(31,41,55,0.72); }
+    .pill { display:inline-block; padding:6px 10px; border-radius:999px; border:1px solid #374151; margin-right:8px; font-size:12px; color:var(--muted); }
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; } .grid { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="logo">Sport Clothes</a>
+      <div class="links">
+        <a href="tshirts.html">T-Shirts</a>
+        <a href="hats.html">Hats</a>
+        <a href="shorts.html">Shorts</a>
+        <a href="payment.html">Payment</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <h1>Level up your game.</h1>
+        <p class="muted">Fast delivery • Easy returns • Secure checkout</p>
+        <div style="margin-top:10px;">
+          <span class="pill">T-Shirts</span>
+          <span class="pill">Hats</span>
+          <span class="pill">Shorts</span>
+        </div>
+        <div class="row" style="margin-top:14px;">
+          <a class="btn" href="tshirts.html">Shop T-Shirts</a>
+          <a class="btn" href="shorts.html">Shop Shorts</a>
+        </div>
+      </div>
+      <video controls>
+        <source src="image/SP.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      
+          
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:22px;">
+      <h2>Contact & Delivery</h2>
+      <p>Email: <a href="mailto:yassinech@gmail.com">yassinech@gmail.com</a> • Phone: +123 456 789</p>
+      <p class="muted">We ship worldwide. Typical delivery 3–7 business days.</p>
+    </section>
+  </main>
+
+  <footer>From 250 DC 2025 Sport Clothes</footer>
+</body>
+</html>
+<video controls>
+    <source src="image/SP.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
